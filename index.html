@@ -3,32 +3,36 @@
 <head>
   <title>Envie mensagem pelo Whatsapp</title>
 </head>
+
 <body>
 <style>
   .input {
     border-radius: 8px;
+    color:blue;
+   	font-size:160%;
   }
 </style>
 
-
-<label for="cell">Celular</label>
+<label class="input">WHATSAPP ATIVAÇÃO</label>
+<br/>
+<br/>
+<label for="cell" class="input">Celular</label>
 <input id="cell" type="text" class="input" />
-<br />
-<label for="message">Texto</label>
+<br/>
+<br/>
+<label for="message" class="input">Texto</label>
 <textarea id="message" class="input"></textarea>
 <br/>
-<button id="clickButton" onclick="handleClick">Enviar</button>
+<br/>
+<button id="clickButton" onclick="handleClick" style="font-size:110%; color:blue; background-color:powderblue; font-family:courier;">Enviar</button>
 <hr>
+<footer>Enjoy!!</footer>
 
 <script>
-
 var phone = document.getElementById("cell")
 var message = document.getElementById("message")
 var button = document.getElementById("clickButton")
 button.onclick = () => window.open("https://api.whatsapp.com/send?phone=+55"+phone.value+"&text="+message.value);
-
-
 </script>
-
 </body>
 </html>
